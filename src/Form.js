@@ -14,12 +14,7 @@ function Form() {
 
           <div class="col-2">
             <div class="buttonHolder">
-              <button
-                type="submit"
-                name="submit"
-                value="APPEND_{{form.id.auto_id}}"
-                class="btn btn-info"
-              >
+              <button type="submit" name="submit" value="" class="btn btn-info">
                 Append
               </button>
             </div>
@@ -30,7 +25,7 @@ function Form() {
               <button
                 type="submit"
                 name="submit"
-                value="UPDATE_{{form.id.auto_id}}"
+                value=""
                 class="btn btn-secondary"
               >
                 Update
@@ -42,7 +37,7 @@ function Form() {
               <button
                 type="submit"
                 name="submit"
-                value="DELETE_{{form.id.auto_id}}"
+                value=""
                 class="btn btn-outline-danger"
               >
                 Delete
