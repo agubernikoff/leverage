@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import levimg from "./assets/fulcrumMark.png";
+import levimg from "./assets/fulcrum.png";
 
 function Navbar() {
   return (
