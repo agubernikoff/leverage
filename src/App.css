@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.form-label {
+  display: flex;
+  justify-content: space-around;
+  width: 63%;
+  margin: 1em;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
+}
+.btn-container > button {
+  margin: 0 0.5em;
+}

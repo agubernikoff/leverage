@@ -1,9 +1,22 @@
 import React from "react";
+import FormRow from "./FormRow";
+import FormLabel from "./FormLabel";
 
 function Form() {
   return (
-    <div>
-      <form method="post" action="">
+    <div style={{ width: "50%" }}>
+      <FormLabel direction="EW" />
+      <FormRow />
+      <FormRow />
+      <FormRow />
+      <FormRow />
+      <FormRow />
+      <div class="buttonHolder">
+        <button type="submit" name="submit" value="" class="btn btn-info">
+          Append
+        </button>
+      </div>
+      {/* <form method="post" action="">
         <div class="row">
           <div class="col-4">
             <div class="form-group d-flex justify-content-center"></div>
@@ -45,7 +58,7 @@ function Form() {
             </div>
           </div>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 }
