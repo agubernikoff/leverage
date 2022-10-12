@@ -6,8 +6,8 @@ function LandingPage() {
   return (
     <div>
       <div className="landing_page">
-        <img src={fulcrum} className="fulcrum_land" />
-        <img src={vector} className="vector_land" />
+        <img src={fulcrum} className="fulcrum_land" alt="Fulcrum" />
+        <img src={vector} className="vector_land" alt="Fulcrum" />
       </div>
       <div className="button_hold">
         <button className="login_button">LOGIN</button>
