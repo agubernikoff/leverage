@@ -59,14 +59,13 @@
 }
 
 .fulcrum_land {
-  margin-top: 4%;
-  margin-bottom: 2%;
-  width: 45%;
+  margin: 4% auto 2%;
+  width: 40%;
 }
 
 .vector_land {
-  width: 45%;
-  margin-bottom: 4%;
+  width: 40%;
+  margin-bottom: 2%;
 }
 
 .button_hold {
