@@ -2,17 +2,28 @@ import React from "react";
 import FormRow from "./FormRow";
 import FormLabel from "./FormLabel";
 
-function Form() {
+function Form({ data, append, deleteRow }) {
+  console.log(data);
+  const mapped = data.map((d) => (
+    <FormRow
+      key={d.tag_name}
+      gridName={d.tag_name}
+      offset={d.offset_in}
+      deleteRow={deleteRow}
+    />
+  ));
   return (
     <div style={{ width: "50%" }}>
       <FormLabel direction="EW" />
-      <FormRow />
-      <FormRow />
-      <FormRow />
-      <FormRow />
-      <FormRow />
-      <div class="buttonHolder">
-        <button type="submit" name="submit" value="" class="btn btn-info">
+      {mapped}
+      <div className="buttonHolder">
+        <button
+          type="submit"
+          name="submit"
+          value=""
+          className="btn btn-info"
+          onClick={append}
+        >
           Append
         </button>
       </div>
