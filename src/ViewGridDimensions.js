@@ -18,9 +18,15 @@ function ViewGridDimensions({ dimensions }) {
   }
   return (
     <div className="view_grid_dimensions_container">
-      <h1>View Grid Dimensions</h1>
-      <div className="point-info-container">
-        <div className="point_select_container">
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-10">
+          <h4>View Grid Dimensions</h4>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-4">
           <p>Point 1</p>
           <select
             defaultValue=""
@@ -32,20 +38,30 @@ function ViewGridDimensions({ dimensions }) {
             {options}
           </select>
         </div>
-        <div>
-          <p>Position (inches)</p>
-          <p>{point1 ? point1.point_levels : "n/a"}</p>
-          <p>{point1 ? point1.point_EW : "n/a"}</p>
-          <p>{point1 ? point1.point_NS : "n/a"}</p>
+        <div className="col-4">
+          <div className=" row h-25 p-1 pl-3 text-center lac-z-7">
+            Position (inches)
+          </div>
+          <div className="row h-25 p-1 pl-3 bg-L lac-z-7 justify-content-center">
+            {point1 ? point1.point_levels : "n/a"}
+          </div>
+          <div className="row h-25 p-1 pl-3 bg-EW lac-z-7 justify-content-center">
+            {point1 ? point1.point_EW : "n/a"}
+          </div>
+          <div className="row h-25 p-1 pl-3 bg-NS lac-z-7 justify-content-center">
+            {point1 ? point1.point_NS : "n/a"}
+          </div>
         </div>
-        <div className="view_grid_labels">
-          <p>Elevation</p>
-          <p>E-W</p>
-          <p>N-S</p>
+        <div className="col-2">
+          <div className="row h-25 p-1 pl-3"></div>
+          <div className="row h-25 p-1 pl-3 lac-z-7">Elev.</div>
+          <div className="row h-25 p-1 pl-3 lac-z-7">E - W</div>
+          <div className="row h-25 p-1 pl-3 lac-z-7">N - S</div>
         </div>
       </div>
-      <div className="point-info-container">
-        <div className="point_select_container">
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-4">
           <p>Point 2</p>
           <select
             defaultValue=""
@@ -57,40 +73,58 @@ function ViewGridDimensions({ dimensions }) {
             {options}
           </select>
         </div>
-        <div>
-          <p>Position (inches)</p>
-          <p>{point2 ? point2.point_levels : "n/a"}</p>
-          <p>{point2 ? point2.point_EW : "n/a"}</p>
-          <p>{point2 ? point2.point_NS : "n/a"}</p>
+        <div className="col-4">
+          <div className=" row h-25 p-1 pl-3 text-center lac-z-7">
+            Position (inches)
+          </div>
+          <div className="row h-25 p-1 pl-3 bg-L lac-z-7 justify-content-center">
+            {point2 ? point2.point_levels : "n/a"}
+          </div>
+          <div className="row h-25 p-1 pl-3 bg-EW lac-z-7 justify-content-center">
+            {point2 ? point2.point_EW : "n/a"}
+          </div>
+          <div className="row h-25 p-1 pl-3 bg-NS lac-z-7 justify-content-center">
+            {point2 ? point2.point_NS : "n/a"}
+          </div>
         </div>
-        <div className="view_grid_labels">
-          <p>Elevation</p>
-          <p>E-W</p>
-          <p>N-S</p>
+        <div className="col-2">
+          <div className="row h-25 p-1 pl-3"></div>
+          <div className="row h-25 p-1 pl-3 lac-z-7">Elev.</div>
+          <div className="row h-25 p-1 pl-3 lac-z-7">E - W</div>
+          <div className="row h-25 p-1 pl-3 lac-z-7">N - S</div>
         </div>
       </div>
-      <div className="point-info-container">
-        <div className="point_select_container">
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-10">
           <p>Taxicab distance to reach Point Two from Point One (inches)</p>
         </div>
-        {/* <div className="taxi_cab_info_container"> */}
-        <div className="view_grid_labels">
-          <p>Travel Up</p>
-          <p>Travel West</p>
-          <p>Travel North</p>
+      </div>
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-4">
+          <div className="row h-35 p-1 pl-3 lac-z-7 justify-content-center">
+            Travel Up
+          </div>
+          <div className="row h-35 p-1 pl-3 lac-z-7 justify-content-center">
+            Travel West
+          </div>
+          <div className="row h-35 p-1 pl-3 lac-z-7 justify-content-center">
+            Travel North
+          </div>
         </div>
-        <div className="view_grid_labels">
-          <p>
+        <div className="col-4">
+          <div className="row h-35 p-1 pl-3 bg-L lac-z-7 justify-content-center">
             {point1 && point2
               ? point2.point_levels - point1.point_levels
               : "n / a"}
-          </p>
-          <p>
+          </div>
+          <div className="row h-35 p-1 pl-3 bg-EW lac-z-7 justify-content-center">
             {point1 && point2 ? point1.point_EW - point2.point_EW : "n / a"}
-          </p>
-          <p>
+          </div>
+          <div className="row h-35 p-1 pl-3 bg-NS lac-z-7 justify-content-center">
             {point1 && point2 ? point1.point_NS - point2.point_NS : "n / a"}
-          </p>
+          </div>
         </div>
       </div>
     </div>

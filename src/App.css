@@ -116,10 +116,12 @@
 }
 
 .view_grid_dimensions_container {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 55%;
+  /* display: grid; */
+}
+
+.view_grid_dimensions_container > h1 {
+  text-align: center;
 }
 .point-info-container {
   display: flex;
