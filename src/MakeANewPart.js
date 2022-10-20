@@ -10,14 +10,19 @@ function MakeANewPart({ prototypes }) {
   }
 
   const options = prototypes.map((p) => (
-    <li key={p.id} onClick={() => setClicked(p)} style={{ cursor: "pointer" }}>
+    <li
+      key={p.id}
+      onClick={() => setClicked(p)}
+      style={{ cursor: "pointer", width: "fit-content" }}
+    >
       {p.shapeType}
     </li>
   ));
+
   return (
-    <div>
-      {!clicked ? <ul>{options}</ul> : null}
-      {clicked ? <PartForm closeForm={closeForm} /> : null}
+    <div style={{ position: "relative" }}>
+      {!clicked ? <ul style={{ marginTop: "1em" }}>{options}</ul> : null}
+      {clicked ? <PartForm closeForm={closeForm} clicked={clicked} /> : null}
     </div>
   );
 }

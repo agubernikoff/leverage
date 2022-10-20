@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PartFormInput from "./PartFormInput";
 
-function PartForm({ closeForm }) {
+function PartForm({ closeForm, clicked }) {
   const [sWidth, setSWidth] = useState("");
   const [sDepth, setSDepth] = useState("");
   const [sLength, setSLength] = useState("");
@@ -34,202 +35,175 @@ function PartForm({ closeForm }) {
       <button onClick={closeForm}>X</button>
       <form className="part_form">
         <h3>Part Edit Form</h3>
-        <div className="input_container">
-          <label>sWidth</label>
-          <input
-            value={sWidth}
-            onChange={(e) => setSWidth(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>sDepth</label>
-          <input
-            value={sDepth}
-            onChange={(e) => setSDepth(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>sLength</label>
-          <input
-            value={sLength}
-            onChange={(e) => setSLength(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>sThickness</label>
-          <input
-            value={sThickness}
-            onChange={(e) => setSThickness(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>shiftStart</label>
-          <input
-            value={shiftStart}
-            onChange={(e) => setShiftStart(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>sReturn</label>
-          <input
-            value={sReturn}
-            onChange={(e) => setSReturn(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>uReturn</label>
-          <input
-            value={uReturn}
-            onChange={(e) => setUReturn(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>webThickness</label>
-          <input
-            value={webThickness}
-            onChange={(e) => setWebThickness(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>flangeThickness</label>
-          <input
-            value={flangeThickness}
-            onChange={(e) => setFlangeThickness(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>cornerRadius</label>
-          <input
-            value={cornerRadius}
-            onChange={(e) => setCornerRadius(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>outsideR</label>
-          <input
-            value={outsideR}
-            onChange={(e) => setOutsideR(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>insideR</label>
-          <input
-            value={insideR}
-            onChange={(e) => setInsideR(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>holeRadius</label>
-          <input
-            value={holeRadius}
-            onChange={(e) => setHoleRadius(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>holeSpacing</label>
-          <input
-            value={holeSpacing}
-            onChange={(e) => setHoleSpacing(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>autoEdge</label>
-          <input
-            value={autoEdge}
-            onChange={(e) => setAutoEdge(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>holeDiameter</label>
-          <input
-            value={holeDiameter}
-            onChange={(e) => setHoleDiameter(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>holeQuantity</label>
-          <input
-            value={holeQuantity}
-            onChange={(e) => setHoleQuantity(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>holeHeight</label>
-          <input
-            value={holeHeight}
-            onChange={(e) => setHoleHeight(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>sEdgePosition</label>
-          <input
-            value={sEdgePosition}
-            onChange={(e) => setSEdgePosition(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>sHeightCategory</label>
-          <input
-            value={sHeightCategory}
-            onChange={(e) => setSHeightCategory(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>complexEdge</label>
-          <input
-            value={complexEdge}
-            onChange={(e) => setComplexEdge(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>complexEdgeA</label>
-          <input
-            value={complexEdgeA}
-            onChange={(e) => setComplexEdgeA(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>complexEdgeB</label>
-          <input
-            value={complexEdgeB}
-            onChange={(e) => setComplexEdgeB(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>complexEdgeC</label>
-          <input
-            value={complexEdgeC}
-            onChange={(e) => setComplexEdgeC(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>complexEdgeD</label>
-          <input
-            value={complexEdgeD}
-            onChange={(e) => setComplexEdgeD(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>complexEdgeE</label>
-          <input
-            value={complexEdgeE}
-            onChange={(e) => setComplexEdgeE(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>startSlope</label>
-          <input
-            value={startSlope}
-            onChange={(e) => setStartSlope(e.target.value)}
-          ></input>
-        </div>
-        <div className="input_container">
-          <label>endSlope</label>
-          <input
-            value={endSlope}
-            onChange={(e) => setEndSlope(e.target.value)}
-          ></input>
-        </div>
+        <strong>{clicked.shapeType}</strong>
+        <PartFormInput
+          label="sWidth"
+          stateVariable={sWidth}
+          stateSetter={setSWidth}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="sDepth"
+          stateVariable={sDepth}
+          stateSetter={setSDepth}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="sLength"
+          stateVariable={sLength}
+          stateSetter={setSLength}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="sThickness"
+          stateVariable={sThickness}
+          stateSetter={setSThickness}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="shiftStart"
+          stateVariable={shiftStart}
+          stateSetter={setShiftStart}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="sReturn"
+          stateVariable={sReturn}
+          stateSetter={setSReturn}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="uReturn"
+          stateVariable={uReturn}
+          stateSetter={setUReturn}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="webThickness"
+          stateVariable={webThickness}
+          stateSetter={setWebThickness}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="flangeThickness"
+          stateVariable={flangeThickness}
+          stateSetter={setFlangeThickness}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="cornerRadius"
+          stateVariable={cornerRadius}
+          stateSetter={setCornerRadius}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="outsideR"
+          stateVariable={outsideR}
+          stateSetter={setOutsideR}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="insideR"
+          stateVariable={insideR}
+          stateSetter={setInsideR}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="holeRadius"
+          stateVariable={holeRadius}
+          stateSetter={setHoleRadius}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="holeSpacing"
+          stateVariable={holeSpacing}
+          stateSetter={setHoleSpacing}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="autoEdge"
+          stateVariable={autoEdge}
+          stateSetter={setAutoEdge}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="holeDiameter"
+          stateVariable={holeDiameter}
+          stateSetter={setHoleDiameter}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="holeQuantity"
+          stateVariable={holeQuantity}
+          stateSetter={setHoleQuantity}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="holeHeight"
+          stateVariable={holeHeight}
+          stateSetter={setHoleHeight}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="sEdgePosition"
+          stateVariable={sEdgePosition}
+          stateSetter={setSEdgePosition}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="sHeightCategory"
+          stateVariable={sHeightCategory}
+          stateSetter={setSHeightCategory}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="complexEdge"
+          stateVariable={complexEdge}
+          stateSetter={setComplexEdge}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="complexEdgeA"
+          stateVariable={complexEdgeA}
+          stateSetter={setComplexEdgeA}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="complexEdgeB"
+          stateVariable={complexEdgeB}
+          stateSetter={setComplexEdgeB}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="complexEdgeC"
+          stateVariable={complexEdgeC}
+          stateSetter={setComplexEdgeC}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="complexEdgeD"
+          stateVariable={complexEdgeD}
+          stateSetter={setComplexEdgeD}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="complexEdgeE"
+          stateVariable={complexEdgeE}
+          stateSetter={setComplexEdgeE}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="startSlope"
+          stateVariable={startSlope}
+          stateSetter={setStartSlope}
+          clicked={clicked}
+        />
+        <PartFormInput
+          label="endSlope"
+          stateVariable={endSlope}
+          stateSetter={setEndSlope}
+          clicked={clicked}
+        />
         <button className="form_submit_button">Submit</button>
       </form>
     </div>

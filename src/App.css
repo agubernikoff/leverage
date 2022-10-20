@@ -121,11 +121,8 @@
 
 .form_container {
   border: 0.15em solid;
-  margin: auto;
+  margin: 1em auto;
   width: 80%;
-  position: absolute;
-  top: 5%;
-  left: 10%;
   background-color: white;
 }
 
