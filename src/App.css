@@ -118,3 +118,35 @@
 .view_grid_dimensions_container {
   width: 55%;
 }
+
+.form_container {
+  border: 0.15em solid;
+  margin: auto;
+  width: 80%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  background-color: white;
+}
+
+.part_form {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  margin: auto;
+}
+
+.part_form > button {
+  margin: 1em;
+}
+
+.form_container > button {
+  float: right;
+}
+
+.input_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% auto;
+  width: 50%;
+}
