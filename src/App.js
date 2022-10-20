@@ -5,10 +5,12 @@ import Form from "./Form";
 import Navbar from "./Navbar";
 import LandingPage from "./LandingPage";
 import ViewGridDimensions from "./ViewGridDimensions";
+import MakeANewPart from "./MakeANewPart";
 
 function App() {
   const [EWgrid, setEWgrid] = useState([]);
   const [grid, setGrid] = useState([]);
+  const [prototypes, setPrototypes] = useState([]);
   useEffect(() => {
     fetch(
       "http://174.127.250.86/LAC_uiapp/lac-define-grid-EW/listDataJSON?format=json"
@@ -25,6 +27,11 @@ function App() {
     )
       .then((r) => r.json())
       .then((data) => setGrid(data.point_data));
+    fetch(
+      "http://174.127.250.86/LAC_uiapp/lac-define-grid-EW/listParametersJSON?format=json"
+    )
+      .then((r) => r.json())
+      .then((data) => setPrototypes(data));
   }, []);
 
   function append() {
@@ -48,6 +55,11 @@ function App() {
           exact
           path="/view_grid"
           element={<ViewGridDimensions dimensions={grid} />}
+        />
+        <Route
+          exact
+          path="/makeanewpart"
+          element={<MakeANewPart prototypes={prototypes} />}
         />
       </Routes>
     </div>
