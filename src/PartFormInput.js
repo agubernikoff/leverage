@@ -1,9 +1,10 @@
 import React from "react";
 
 function PartFormInput({ clicked, stateVariable, stateSetter, label }) {
-  return clicked.parameter_dict.includes(label) ? (
+  console.log(clicked.parameter_dict[label]);
+  return clicked.parameter_dict[label] ? (
     <div className="input_container">
-      <label>{label}</label>
+      <label>{clicked.parameter_dict[label].label}</label>
       <input
         value={stateVariable}
         onChange={(e) => stateSetter(e.target.value)}
