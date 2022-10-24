@@ -15,7 +15,7 @@ function MakeANewPart({ prototypes }) {
       onClick={() => setClicked(p)}
       style={{ cursor: "pointer", width: "fit-content" }}
     >
-      {p.shapeType}
+      {p.shapeTitle}
     </li>
   ));
 

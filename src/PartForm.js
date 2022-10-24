@@ -35,7 +35,7 @@ function PartForm({ closeForm, clicked }) {
       <button onClick={closeForm}>X</button>
       <form className="part_form">
         <h3>Part Edit Form</h3>
-        <strong>{clicked.shapeType}</strong>
+        <strong>{clicked.shapeTitle}</strong>
         <PartFormInput
           label="sWidth"
           stateVariable={sWidth}
