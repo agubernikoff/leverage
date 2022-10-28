@@ -1,8 +1,11 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import Form from "./Form";
 import Navbar from "./Navbar";
+import Login from "./Login";
+import Signup from "./Signup";
+import Homepage from "./Homepage";
+import Form from "./Form";
 import LandingPage from "./LandingPage";
 import ViewGridDimensions from "./ViewGridDimensions";
 import MakeANewPart from "./MakeANewPart";
@@ -46,6 +49,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/home" element={<Homepage />} />
         <Route
           exact
           path="/form"
