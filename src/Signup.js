@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "./LoginSignupFooter";
 
 function Signup() {
   const [org, setOrg] = useState("");
@@ -63,6 +64,7 @@ function Signup() {
         </div>
         <button>SIGN UP</button>
       </form>
+      <Footer />
     </div>
   );
 }
